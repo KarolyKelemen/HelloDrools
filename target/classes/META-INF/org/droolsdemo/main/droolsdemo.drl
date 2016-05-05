@@ -1,0 +1,10 @@
+package org.droolsdemo.main
+
+import org.droolsdemo.entities.Unification
+
+rule "Rule 01"   
+    when
+        $u : Unification(sourceAccount.billingCycle == targetAccount.billingCycle)
+    then
+        $u.unify();
+end
